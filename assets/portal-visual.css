@@ -1,0 +1,36 @@
+:root { --green:#173e44; --deep:#102f35; --cream:#f3f6f5; --ink:#123640; --muted:#a9c0c7; --line:#36515b; }
+html,body { min-height:100%; }
+body { background:#102c37; }
+.page { position:relative; width:100%; min-height:100vh; padding:24px; display:grid; place-items:center; background:linear-gradient(90deg,rgba(9,27,42,.69),rgba(12,35,48,.35)),linear-gradient(0deg,rgba(9,22,32,.55),transparent 42%),url('./suporte-ti-obras.png') center/cover no-repeat; }
+.wrap { position:relative; z-index:1; width:min(100%,440px); }
+.portal { display:block; min-height:0; width:100%; border:1px solid rgba(168,204,213,.3); border-radius:20px; background:rgba(16,35,46,.94); color:#f3f8f9; box-shadow:0 26px 85px rgba(5,16,24,.42); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); }
+.brand-panel { min-height:0; padding:30px 30px 0; display:flex; flex-direction:column; align-items:center; gap:16px; background:none; text-align:center; }
+.brand-panel::before,.brand-panel::after { display:none; }
+.logo-action { position:relative; z-index:1; width:max-content; padding:6px; border:0; border-radius:12px; background:transparent; cursor:pointer; transition:background .18s ease,transform .18s ease; }
+.logo-action:hover { background:rgba(255,255,255,.08); transform:translateY(-1px); }
+.logo-action:focus-visible { outline:2px solid #d9db15; outline-offset:2px; }
+.logo { display:block; width:165px; height:auto; transform-origin:center; }
+.brand-copy { position:relative; z-index:1; }
+.brand-copy p { margin:0 0 7px; color:#fdba74; font-size:10px; font-weight:800; letter-spacing:.16em; }
+.brand-copy h1 { margin:0; max-width:none; color:#fff; font-size:30px; line-height:1.12; letter-spacing:-.04em; }
+.brand-copy h1 span { color:#fb923c; }
+.content { padding:0 34px 28px; display:block; background:none; text-align:center; }
+.eyebrow, .content h2 { display:none; }
+.lead { margin:15px 0 22px; color:#b6cbd0; font-size:13px; line-height:1.6; }
+.login-actions { max-width:none; gap:10px; }
+.button { min-height:47px; padding:0 16px; border-radius:10px; background:#fff; color:#153743; font-size:14px; box-shadow:0 3px 13px rgba(6,45,57,.08); }
+.button:hover { background:#eef8f9; color:#153743; box-shadow:0 8px 18px rgba(6,45,57,.15); }
+.button.secondary { border-color:#66818a; background:transparent; color:#f1f7f8; }
+.button.secondary:hover { border-color:#c4dadd; background:rgba(255,255,255,.08); }
+.recovery-links { margin-top:5px; }
+.forgot { color:#b6cbd0; font-size:11px; }
+.forgot:hover { color:#fff; }
+.steps { margin:23px 0 0; padding:17px 0 0; gap:8px; border-color:#36515b; text-align:left; }
+.step b { width:25px; height:25px; margin-bottom:6px; border-radius:7px; background:rgba(0,167,223,.15); color:#c5ebf0; font-size:11px; }
+.step strong { color:#f3f8f9; font-size:11px; }
+.step span { color:#9db6be; font-size:10px; }
+.utility { padding:12px 4px 0; color:#d1e0e2; font-size:10px; }
+.utility a:hover { color:#fff; }
+.button:focus-visible,.utility a:focus-visible { outline:2px solid #d9db15; outline-offset:3px; }
+@media (max-width:560px) { .page { padding:16px; } .portal { border-radius:18px; } .brand-panel { padding:26px 24px 0; } .content { padding:0 24px 24px; } .steps { gap:5px; } .step span { display:none; } .utility { align-items:center; } }
+@media (prefers-reduced-motion:reduce) { .logo-action,.button { transition:none; } .logo-action:hover,.button:hover { transform:none; } }

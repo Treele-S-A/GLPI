@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#27444a">
   <meta name="description" content="Central de suporte interno da Treèle.">
   <title>Central de Suporte | Treèle</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2327444a'/%3E%3Cpath d='M13 17 32 6l19 11v22L32 50 13 39z' fill='none' stroke='%23fff' stroke-width='7'/%3E%3Cpath d='m18 22 14-8 14 8-14 8z' fill='%23d9db15'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="assets/glpi-logo-orange.svg?v=20261030b">
   <style>
     :root { color-scheme: light; --green:#27444a; --deep:#1d363b; --lime:#d9db15; --blue:#00a7df; --cream:#f4f1e8; --ink:#253c42; --muted:#748286; --line:#e2e3dd; }
     * { box-sizing:border-box; }
@@ -51,18 +51,19 @@
     @media (max-width:560px) { .page{width:min(100% - 24px,1120px);padding-bottom:20px}.portal{border-radius:22px}.brand-panel{min-height:265px;padding:32px 28px}.logo{width:165px}.content{padding:38px 28px 42px}.button{width:100%}.steps{grid-template-columns:1fr;gap:17px}.step{display:grid;grid-template-columns:38px 1fr;column-gap:8px}.step b{grid-row:span 2}.utility{flex-direction:column;align-items:center;text-align:center} }
     @media (prefers-reduced-motion:reduce) { * { transition:none!important; } }
   </style>
+  <link rel="stylesheet" href="assets/portal-visual.css">
 </head>
 <body>
   <main class="page">
     <div class="wrap">
       <section class="portal" aria-labelledby="page-title">
         <div class="brand-panel">
-          <img class="logo" src="assets/logo-treele.png" alt="Treèle Construtora">
-          <div class="brand-copy"><p>Portal interno</p><h1>Suporte que acompanha você<span>.</span></h1></div>
+          <button class="logo-action" type="button" aria-label="Animar logo Treèle" title="Treèle Construtora"><img class="logo" src="assets/logo-treele.png" alt="Treèle Construtora"></button>
+          <div class="brand-copy"><p>CENTRAL DE SUPORTE</p><h1 id="page-title">Treèle Suporte<span>.</span></h1></div>
         </div>
         <div class="content">
           <p class="eyebrow">Central de suporte</p>
-          <h2 id="page-title">Como podemos ajudar?</h2>
+          <h2>Como podemos ajudar?</h2>
           <p class="lead">Abra uma solicitação para a equipe de TI e acompanhe o atendimento em um só lugar.</p>
           <div class="login-actions">
             <a class="button" href="https://treele.us5.glpi-network.cloud/plugins/oauthsso/front/login.php?plugin_oauthsso_applications_id=1&amp;redirect=">
@@ -85,5 +86,13 @@
       <footer class="utility"><span>Central interna de suporte · Treèle Construtora</span><a href="https://treele.com.br/">Site institucional</a></footer>
     </div>
   </main>
+  <script>
+    document.querySelector('.logo-action').addEventListener('click', function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const logo = this.querySelector('.logo');
+      logo.getAnimations().forEach(animation => animation.cancel());
+      logo.animate([{ transform: 'rotate(0deg) scale(1)' }, { transform: 'rotate(180deg) scale(.92)' }, { transform: 'rotate(360deg) scale(1)' }], { duration: 620, easing: 'cubic-bezier(.22,.8,.22,1)' });
+    });
+  </script>
 </body>
 </html>
