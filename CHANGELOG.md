@@ -1,5 +1,10 @@
 # Registro de alterações — Central de Suporte
 
+## 11/11/2026
+
+- Botão "Entrar com Google" abaixo do "Entrar com Microsoft" (login do comercial com conta pessoal, pelo plugin OAuth SSO).
+- Passo 1 passou a dizer "Use sua conta Microsoft ou Google".
+
 ## 30/10/2026
 
 ### 30/10/2026
