@@ -4,13 +4,14 @@ Mapa de todos os sistemas: `C:\GitHub\Desenvolvimento\MAPA_SISTEMAS.md`.
 
 ## Onde paramos
 
+- **11/11/2026:** botão **"Entrar com Google"** na página, abaixo do Microsoft (o comercial usa conta pessoal). O Google foi cadastrado pelo Erycles no plugin OAuth SSO do GLPI (cliente OAuth no Google Cloud, app External publicado); o botão usa `plugin_oauthsso_applications_id=2`. Passo 1 diz "Use sua conta Microsoft ou Google". Publicado com autorização. Próximo passo: testar o login Google com uma pessoa do comercial (o Gmail dela precisa estar no usuário do GLPI; criação automática de usuário fica desligada).
 - **30/10/2026:** capa repaginada no padrão visual do RH, com foto gerada de TI na obra, fundo integral, cartão central, animação da logo e favicon laranja do GLPI. Links de acesso e recuperação preservados. Publicação autorizada pelo usuário. Próximo passo: conferir a página em produção em desktop e celular.
 - **28/10/2026:** página de entrada no ar (última mudança em 06/10/2026). O GLPI em si roda na nuvem do fornecedor.
 
 ## O que é
 Página de entrada da **Central de Suporte da Treèle** ("Central de Suporte | Treèle"). O GLPI em si roda na nuvem
-do fornecedor: **https://treele.us5.glpi-network.cloud** (login SSO Microsoft pelo plugin `oauthsso`, recuperação
-de senha da Microsoft e do GLPI). Este repositório só tem a página que leva até lá.
+do fornecedor: **https://treele.us5.glpi-network.cloud** (login SSO Microsoft — aplicação 1 — e Google — aplicação 2 — pelo plugin
+`oauthsso`; recuperação de senha da Microsoft e do GLPI). Este repositório só tem a página que leva até lá.
 
 ## Onde está
 - Produção: **https://glpi.treele.com.br** (Vercel `glpi`, time `treele2`). GitHub `Treele-S-A/GLPI`, branch `main`.
@@ -30,3 +31,4 @@ Uma linha por trabalho, a mais recente no fim: `AAAA-MM-DD · pessoa · IA usada
 - 2026-10-30 · TI · Codex · favicon do GLPI e CHANGELOG.md local · sem commit a pedido do usuário
 - 2026-10-30 · TI · Codex · favicon do GLPI recolorido em laranja e ícone do Portal alinhado · sem commit a pedido do usuário
 - 2026-10-30 · TI · Codex · capa e favicon do GLPI publicados após autorização · (este commit)
+- 2026-11-11 · Erycles · Claude Code · botão "Entrar com Google" (OAuth SSO aplicação 2) abaixo do Microsoft; texto do passo 1 · (este commit)
